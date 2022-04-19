@@ -2,6 +2,7 @@ import { createContext, useState, useEffect } from "react"
 import { onAuthStateChanged, User } from "firebase/auth";
 import { auth } from "../config/firebase.config";
 import AuthService from "../service/AuthService";
+import PageProtection from "../../pages/PageProtection";
 
 export const AuthContext = createContext({})
 
@@ -33,11 +34,9 @@ export const AuthContextProvider = ({
         });
     }, [])
 
-    console.log(user);
-
     return (
         <AuthContext.Provider value={{ user, login, logout }}>
-            {children}
+            <PageProtection>{children}</PageProtection>
         </AuthContext.Provider >
     )
 }

@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../src/config/firebase.config";
 import TaskClass from "../src/Models/TaskClass";
+import { useRouter } from "next/router";
+import { AuthContext } from "../src/context/AuthContext";
 
 function Tasks() {
     const [dataSnap, setDataSnap] = useState<TaskClass[]>([]);
@@ -16,7 +18,6 @@ function Tasks() {
                 setDataSnap(oldArray => [...oldArray, task]);
             });
         });
-
     }, [])
 
     if (isLoading) return <p>Loading...</p>

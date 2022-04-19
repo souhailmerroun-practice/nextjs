@@ -1,14 +1,12 @@
-import { useContext } from "react";
+import { useRouter } from "next/router";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../src/context/AuthContext";
 import AuthService from "../src/service/AuthService";
 
 function Login() {
-    const authContext = useContext(AuthContext)
-
-    console.log(authContext);
+    const { user } = useContext(AuthContext)
 
     const onClickButtonLogin = () => {
-        console.log('log in with google')
         AuthService.logInWithGoogle();
     }
 
