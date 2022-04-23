@@ -1,11 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { Tip } from './types'
+import { Tip } from '../src/types'
+import { TipControllerIndex } from '../src/controllers/TipController'
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/api/tips')
-  const { tips } = await res.json()
-
+  const tips = TipControllerIndex();
   const tip = tips[Math.floor(Math.random() * tips.length)]
 
   return {
