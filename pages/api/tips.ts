@@ -1,15 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-
-type Tip = {
-  title: string
-  description: string
-  author: string
-}
-
-type Data = {
-  tips: Tip[]
-}
+import { Data } from '../types';
 
 export default function handler(
   req: NextApiRequest,
@@ -21,5 +12,17 @@ export default function handler(
     author: "John Doe",
   };
 
-  res.status(200).json({ tips: [tip] });
+  const tip2 = {
+    title: "Another tip",
+    description: "This is a random one",
+    author: "Jane Doe",
+  };
+
+  const tip3 = {
+    title: "Here is it",
+    description: "Lorem ipsum something",
+    author: "Jane Jana",
+  };
+
+  res.status(200).json({ tips: [tip, tip2, tip3] });
 }

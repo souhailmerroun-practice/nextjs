@@ -1,14 +1,25 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { Tip } from './types'
 
-const Home: NextPage = () => {
-  const tip = {
-    title: "Tip",
-    description: "This is a tip",
-    author: "John Doe",
+export async function getStaticProps() {
+  const res = await fetch('http://localhost:3000/api/tips')
+  const { tips } = await res.json()
+
+  const tip = tips[Math.floor(Math.random() * tips.length)]
+
+  return {
+    props: {
+      tip: tip
+    }
   }
+}
+
+interface Props {
+  tip: Tip
+}
+
+const Home = ({ tip }: Props) => {
 
   return (
     <div className={styles.container}>
