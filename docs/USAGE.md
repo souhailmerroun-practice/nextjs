@@ -2,8 +2,16 @@
 
 Visiting `http://localhost:3000/`
 
-https://github.com/souhailmerroun-practice/nextjs/blob/cf7145adad970f076a3949428d4cca14b426b6ba/pages/index.tsx#L1-L31
+https://github.com/souhailmerroun-practice/nextjs/blob/c398c77b8fdcfe0f9aae274a17daf4e3fe3da5dd/pages/index.tsx#L22-L40
 
-Visint `http://localhost:3000/api/tips`
+which gets data from 
 
-https://github.com/souhailmerroun-practice/nextjs/blob/3492cfc2bab8aff54c734673d07a4b0b20855caa/pages/api/tips.ts#L1-L25
+https://github.com/souhailmerroun-practice/nextjs/blob/c398c77b8fdcfe0f9aae274a17daf4e3fe3da5dd/pages/index.tsx#L5-L16
+
+Visiting `http://localhost:3000/api/tips`
+
+https://github.com/souhailmerroun-practice/nextjs/blob/c398c77b8fdcfe0f9aae274a17daf4e3fe3da5dd/pages/api/tips.ts#L7-L16
+
+Which loads data from 
+
+https://github.com/souhailmerroun-practice/nextjs/blob/95bd8bd8d8d9d7c5a63efb4e341c834731e779ab/data/tips.json#L1-L17
