@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Tip",
+        "description": "This is a tip",
+        "author": "John Doe"
+    },
+    {
+        "title": "Another tip",
+        "description": "This is a random one",
+        "author": "Jane Doe"
+    },
+    {
+        "title": "Here is it",
+        "description": "Lorem ipsum something",
+        "author": "Jane Jana"
+    }
+]
