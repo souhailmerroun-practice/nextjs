@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css'
 import { Tip } from '../src/types'
 import { TipControllerIndex } from '../src/controllers/TipController'
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const tips = TipControllerIndex();
   const tip = tips[Math.floor(Math.random() * tips.length)]
 
